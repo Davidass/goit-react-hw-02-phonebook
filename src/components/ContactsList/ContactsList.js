@@ -8,7 +8,6 @@ const ContactsList = ({ contacts, onRemove }) => {
       <ul className={s.list}>
         {contacts.map(({ id, name, number }) => (
           <li key={id}>
-            {' '}
             <p>
               {name}: {number}
             </p>
@@ -33,7 +32,7 @@ ContactsList.protoTypes = {
       name: PropTypes.string.isRequired,
       number: PropTypes.string.isRequired,
     }),
-  ),
+  ).isRequired,
   onRemove: PropTypes.func.isRequired,
 };
 

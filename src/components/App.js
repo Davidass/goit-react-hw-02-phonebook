@@ -34,7 +34,7 @@ class App extends Component {
     //   return;
     // }
 
-    const existContact = !!contacts.find(contact => contact.name === name);
+    const existContact = !!contacts.some(contact => contact.name === name);
 
     existContact && alert('Contact is already exist');
 
